@@ -3,19 +3,20 @@
 Summary:		JavaScript interpreter and libraries
 Name:		js
 Epoch:		1
-Version:		1.8.5
-Release:		14%{?hgdate:.hg%{hgdate}}%{?dist}
-License:		GPLv2+ or LGPLv2+ or MPLv1.1
+Version:	1.8.5
+Release:	15%{?hgdate:.hg%{hgdate}}%{?dist}
+License:	GPLv2+ or LGPLv2+ or MPLv1.1
 Group:		Development/Languages
-URL:			http://www.mozilla.org/js/
-Source0:		http://ftp.mozilla.org/pub/mozilla.org/js/js185-1.0.0.tar.gz
+URL:		http://www.mozilla.org/js/
+Source0:	http://ftp.mozilla.org/pub/mozilla.org/js/js185-1.0.0.tar.gz
 Patch0:		js-1.8.5-64bit-big-endian.patch
 Patch1:		js-1.8.5-secondary-jit.patch
 Patch2:		js185-destdir.patch
 Patch3:		js-1.8.5-537701.patch
 Patch4:		js185-arm-nosoftfp.patch
 Patch5:		js185-libedit.patch
-Provides:		libjs = %{version}-%{release}
+Provides:	libjs = %{version}-%{release}
+Provides:   libjs.so.1
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 Buildrequires:	nspr-devel >= 4.7
 BuildRequires:	python
@@ -135,6 +136,9 @@ rm -rf %{buildroot}
 %{_includedir}/js
 
 %changelog
+* Fri Mar 07 2014 Wendall Cada <wendallc@83864.com> - 1.8.5-15
+- Added Provides for libjs.so.1
+
 * Sat Aug 03 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1:1.8.5-14
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
 

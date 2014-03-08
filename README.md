@@ -5,9 +5,7 @@ The default spec file in Fedora doesn't provide libjs.so.1 needed for installati
 
 ## Building on Host OS
 * If not already installed, install and configure system for building rpms. [Instructions](http://wiki.centos.org/HowTos/SetupRpmBuildEnvironment)
-* Checkout working js-1.8.5
-  * [js185](https://github.com/wendall911/js185)
-* Copy contents of repo to ~/rpmbuild/SOURCES
+* Copy contents of this repo to ~/rpmbuild/SOURCES
 * Fetch sources
   * spectool -g -R js.spec
 * Build SRPM

@@ -1,5 +1,5 @@
 # Build current js-devel for CentOS
-This repository a fork of http://pkgs.fedoraproject.org/cgit/js.git/
+This repository is a fork of http://pkgs.fedoraproject.org/cgit/js.git/
 
 The default spec file in Fedora doesn't provide libjs.so.1 needed for installation in CentOS/RHEL, so I've forked that repository for explicitly building a js185 that provides required dependencies.
 
